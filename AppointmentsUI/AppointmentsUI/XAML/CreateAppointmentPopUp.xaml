@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:behavior="clr-namespace:AppointmentsUI"
+             x:Class="AppointmentsUI.XAML.CreateAppointmentPopUp">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400" 
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"/>
+    </pages:PopupPage.Animation>
+    <ScrollView>
+        <StackLayout Margin="12" Padding="24" BackgroundColor="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout>
+                <Label Text="Ingrese su direccion:" />
+                <Entry x:Name="Address" Placeholder="Direccion."/>
+                <Label Text="Tipo de Servicio:"/>
+                <Button Text="Ningun servicio seleccionado." Clicked="MultiSelect_Clicked"/>
+                <Label Text="Datos adicionales:" />
+                <Entry x:Name="AditionalData" Placeholder="Datos." />
+                <Label Text="Numero de telefono:" />
+                <Entry Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behavior:PhonenumberBehavior Mask="(XXX) XXX-XXX" />
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ingrese una hora." />
+                <TimePicker />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="CrearCita" 
+                BackgroundColor="Green"
+                TextColor="White" 
+                FontSize="8"
+                HeightRequest="30"    
+                WidthRequest="60"
+                HorizontalOptions="Start"
+                IsEnabled="True"
+                Text="Crear Cita" 
+                CornerRadius="10" 
+                Clicked="CrearCita_Clicked"/>
+                <Button x:Name="SalirCita" 
+                BackgroundColor="DarkRed"
+                TextColor="White" 
+                FontSize="8" 
+                HorizontalOptions="End"
+                HeightRequest="30"
+                WidthRequest="60"    
+                IsEnabled="True"
+                Text="Salir" 
+                CornerRadius="10" 
+                Clicked="SalirCita_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</pages:PopupPage>
