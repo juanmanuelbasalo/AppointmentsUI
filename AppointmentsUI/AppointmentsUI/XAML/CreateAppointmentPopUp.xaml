@@ -19,13 +19,25 @@
     <ScrollView>
         <StackLayout Margin="12" Padding="24" BackgroundColor="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Center">
             <StackLayout>
-                <Label Text="Ingrese su direccion:" />
+                <Label Text="Ingrese su direccion:" TextColor="Black"/>
                 <Entry x:Name="Address" Placeholder="Direccion."/>
-                <Label Text="Tipo de Servicio:"/>
-                <Button Text="Ningun servicio seleccionado." Clicked="MultiSelect_Clicked"/>
-                <Label Text="Datos adicionales:" />
-                <Entry x:Name="AditionalData" Placeholder="Datos." />
-                <Label Text="Numero de telefono:" />
+                <Label Text="Tipo de Servicio:" TextColor="Black"/>
+                <Picker Title="Elige un servicio">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Planchado</x:String>
+                            <x:String>Lavado</x:String>
+                            <x:String>Otra cosa</x:String>
+                            <x:String>Prueba3</x:String>
+                            <x:String>No se que mas</x:String>
+                            <x:String>No se que menos</x:String>
+                            <x:String>Algo mas</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Detalles adicionales:" TextColor="Black"/>
+                <Entry x:Name="AditionalData" Placeholder="Detalles." />
+                <Label Text="Numero de telefono:" TextColor="Black"/>
                 <Entry Keyboard="Numeric">
                     <Entry.Behaviors>
                         <behavior:PhonenumberBehavior Mask="(XXX) XXX-XXX" />

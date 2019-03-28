@@ -12,7 +12,7 @@ namespace AppointmentsUI
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Register();//new MainPage();
         }
 
         protected override void OnStart()

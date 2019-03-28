@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppointmentsUI.XAML.Login">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="WhiteSmoke">
+        <Image/> <!-- El logo de la empresa -->
+
+        <Label Text="Correo:" TextColor="Black" />
+        <Entry FontSize="12" Placeholder="ejemplo@hotmail.com" x:Name="Email"/>
+        <Label Text="Contraseña:" TextColor="Black"/>
+        <Entry FontSize="12" IsPassword="True" x:Name="Password"/>
+        
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Orientation="Horizontal" >
+            <Button x:Name="LoginButton" 
+                BackgroundColor="Green"
+                TextColor="White" 
+                FontSize="8"
+                HeightRequest="30"    
+                WidthRequest="60"
+                HorizontalOptions="Start"
+                IsEnabled="True"
+                Text="Login" 
+                CornerRadius="10" 
+                Clicked="LoginButton_Clicked"/>
+            <Button x:Name="RememberPasswordButton" 
+                BackgroundColor="DarkRed"
+                TextColor="White" 
+                FontSize="8" 
+                HorizontalOptions="End"
+                HeightRequest="30"
+                WidthRequest="100"    
+                IsEnabled="True"
+                Text="Recordar" 
+                CornerRadius="10" 
+                Clicked="RememberPasswordButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppointmentsUI.XAML.Register">
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Image/> <!-- El logo de la empresa-->
+            <Label Text="Nombre" TextColor="Black"/>
+            <Entry Placeholder="Nombre1"/>
+            <Label Text="Apellido" TextColor="Black"/>
+            <Entry Placeholder="Apellido1 Apellido 2"/>
+            <Label Text="Correo" TextColor="Black"/>
+            <Entry Placeholder="ejem@hotmail.com"/>
+            <Label Text="Contraseña" TextColor="Black"/>
+            <Entry IsPassword="True"/>
+            <Label Text="Repetir Contraseña" TextColor="Black"/>
+            <Entry IsPassword="True"/>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Orientation="Horizontal" >
+                <Button x:Name="Crear" 
+                BackgroundColor="Green"
+                TextColor="White" 
+                FontSize="8"
+                HeightRequest="30"    
+                WidthRequest="60"
+                HorizontalOptions="Start"
+                IsEnabled="True"
+                Text="Crear" 
+                CornerRadius="10" 
+                Clicked="Crear_Clicked"/>
+                <Button x:Name="Volver" 
+                BackgroundColor="DarkRed"
+                TextColor="White" 
+                FontSize="8" 
+                HorizontalOptions="End"
+                HeightRequest="30"
+                WidthRequest="100"    
+                IsEnabled="True"
+                Text="Volver" 
+                CornerRadius="10" 
+                Clicked="Volver_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
