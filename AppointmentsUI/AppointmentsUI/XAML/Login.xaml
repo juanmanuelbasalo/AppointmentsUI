@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppointmentsUI.XAML.Login">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="WhiteSmoke">
-        <Image/> <!-- El logo de la empresa -->
+        <Image Source="logo.jpg"/> <!-- El logo de la empresa -->
 
         <Label Text="Correo:" TextColor="Black" />
         <Entry FontSize="12" Placeholder="ejemplo@hotmail.com" x:Name="Email"/>

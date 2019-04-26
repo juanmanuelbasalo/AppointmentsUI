@@ -3,9 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppointmentsUI.XAML.CheckAppointment"
              Title="Revisar citas">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Revisar citas" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ListView x:Name="listAppointments" HasUnevenRows="True" SeparatorColor="Black">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Name}" FontSize="10" TextColor="Black" />
+                            <Label Text="{Binding Description}" FontSize="10" TextColor="Gray"/>
+                        </StackLayout>
+                        <StackLayout Margin="10,0,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="{Binding Date}" FontSize="11" TextColor="Black"/>
+                            <Label Text="{Binding Status}" FontSize="10" TextColor="Black" Margin="5,0,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

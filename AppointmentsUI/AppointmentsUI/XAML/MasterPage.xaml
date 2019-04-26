@@ -5,16 +5,16 @@
              xmlns:localXaml="clr-namespace:AppointmentsUI.XAML"
 			 x:Class="AppointmentsUI.XAML.MasterPage"
 			 Padding="0,40,0,0"
-			 Icon="hamburger.png"
+			 Icon="icons8_planner_32.png"
 			 Title="Menu">
     <StackLayout>
-        <ListView x:Name="listView" x:FieldModifier="public">
+        <ListView x:Name="listView" x:FieldModifier="public" SeparatorColor="Black">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
-                    <local:MasterPageItem Title="Agendar Cita" IconSource="contacts.png" TargetType="{x:Type localXaml:CreateAppointment}" />
-                    <local:MasterPageItem Title="Revisar citas" IconSource="todo.png" TargetType="{x:Type localXaml:CheckAppointment}" />
-                    <local:MasterPageItem Title="Ver perfil" IconSource="reminders.png" TargetType="{x:Type localXaml:CheckProfile}" />
-                    <local:MasterPageItem Title="Salir" IconSource="reminders.png" TargetType="{x:Type localXaml:Exit}" />
+                    <local:MasterPageItem Title="Agendar Cita" IconSource="icons8_planner_32.png" TargetType="{x:Type localXaml:CreateAppointment}" />
+                    <local:MasterPageItem Title="Revisar citas" IconSource="icons8_calendar_32.png" TargetType="{x:Type localXaml:CheckAppointment}" />
+                    <local:MasterPageItem Title="Ver perfil" IconSource="icons8_user_32.png" TargetType="{x:Type localXaml:CheckProfile}" />
+                    <local:MasterPageItem Title="Salir" IconSource="icons8_cancel_32.png" TargetType="{x:Type localXaml:Exit}" />
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

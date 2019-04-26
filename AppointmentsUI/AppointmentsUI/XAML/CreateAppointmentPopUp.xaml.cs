@@ -23,6 +23,7 @@ namespace AppointmentsUI.XAML
 
         private async void CrearCita_Clicked(object sender, EventArgs e)
         {
+
             await navigation.PopAsync();
         }
 

@@ -4,7 +4,7 @@
              x:Class="AppointmentsUI.XAML.Register">
     <ScrollView>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-            <Image/> <!-- El logo de la empresa-->
+            <Image Source="logo.jpg"/> <!-- El logo de la empresa-->
             <Label Text="Nombre" TextColor="Black"/>
             <Entry Placeholder="Nombre1"/>
             <Label Text="Apellido" TextColor="Black"/>
